@@ -1,11 +1,23 @@
-<h1>All Orders</h1>
-<ul>
-  <% @orderables.each do |orderable| %>
-    <li>
-      <b>Order Id:</b><%= orderable.id %></br>
-      <b>Product Id:</b><%= orderable.product_id %></br>
-      <b>Quantity:</b><%= orderable.quantity %>
-    </li>
-    <hr>
-  <% end %>
-</ul>
+<center>
+  <h1>All Orders</h1>
+  <hr>
+  <table style="border-collapse: collapse; width: 65%; margin: 1rem 0;">
+    <thead>
+      <tr style="background-color: #2c3e50; color: #fff;">
+        <th style="padding: 1rem; font-weight: bold;">Order Id</th>
+        <th style="padding: 1rem; font-weight: bold;">Product Id</th>
+        <th style="padding: 1rem; font-weight: bold;">Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @orderables.each do |orderable| %>
+      <tr style="background-color: #ecf0f1;">
+        <td style="padding: 1rem; border: 1px solid #ddd;"><%= orderable.id %></td>
+        <td style="padding: 1rem; border: 1px solid #ddd;"><%= orderable.product_id %></td>
+        <td style="padding: 1rem; border: 1px solid #ddd;"><%= orderable.quantity %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</center>
+
