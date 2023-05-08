@@ -1,0 +1,14 @@
+<%= link_to "Products",products_path %>
+
+<%= form_for @orderable do |f| %>
+  <%= f.label :customer_name %>
+  <%= f.text_field :customer_name %></br>
+
+  <%= f.label :customer_email %>
+  <%= f.email_field :customer_email %></br>
+
+  <%= f.label :address %>
+  <%= f.text_field :address%></br>
+
+  <%= f.submit "Place Order" %>
+<% end %>

@@ -1,0 +1,8 @@
+<h1>All Orders</h1>
+<ul>
+  <% @orderables.each do |orderable| %>
+    <li><b>Product Id:</b><%= orderable.product_id %></br>
+      <b>Quantity:</b><%= orderable.quantity %></li>
+      <hr>
+  <% end %>
+</ul>

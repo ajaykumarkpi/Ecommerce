@@ -1,2 +1,28 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<% if logged_in?(:admin) %>
+   <h1><center>Welcome admin</center></h1>
+   <b><h4>Click the below link to see all products</h2></b>
+  <%= link_to "All products", products_show_path %>
+  </br></br>
+  <b><h4>Click the below link to see all users</h2></b>
+  <%= link_to "All users",users_index_path %>
+  </br></br>
+  <b><h4>Click the below link to see all orders</h2></b>
+  <%= link_to "All Orders", orderables_path %>
+
+<% else %>
+  <h1 align=center>Welcome to E-Commerce website, Shop happily...</h1>
+  <h2>All Products</h2>
+  <% @products.each do |product| %>
+    <p><b>Name</b>: <%= product.name %></br><b>Description</b>: <%= product.description %></br><b>unit price of </b><%= number_to_currency(product.price) %></p>
+    <%= form_with(url: carts_add_path) do |f| %>
+      <%= f.hidden_field :id, value: product.id %>
+      <%= f.number_field :quantity,value: 0, min: 1 %>
+      <%= f.submit "Add to Cart" %>
+    <% end %>
+    <hr>
+  <% end%>
+  <%= paginate @products %>
+  </br>
+  <center><%= button_to "View cart",carts_index_path %></center>
+<% end %>
+

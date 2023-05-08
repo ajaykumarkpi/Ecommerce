@@ -1,12 +1,21 @@
 Rails.application.routes.draw do
-  root 'products#index'
+ 
+  devise_for :users ,path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
+  root to: 'products#index'
 
-  get 'orders/index'
-  get 'orders/show'
-  get 'orders/new'
-  get 'carts/show'
-  get 'products/index'
-  get 'products/new'
-  get 'products/edit'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  post 'carts',to: 'cart#show'
+  post 'carts/add'
+  post 'carts/remove'
+  post 'carts/index'
+  post 'orderables/new', to: 'orderables#create'
+  get 'users/index'
+  get 'orderables/index'
+  get 'products/show'
+
+
+  resources :products
+  resources :orderables
+  resources :users, only: [:index]
+  
 end
+
