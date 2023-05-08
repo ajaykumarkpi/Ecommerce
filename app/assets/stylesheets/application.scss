@@ -16,3 +16,184 @@
  *= require_tree .
  *= require_self
  */
+
+.logout-button {
+  float: right;
+  margin-right: 20px;
+}
+
+.logout {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Styling for Register button */
+.register {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.register:hover {
+  background-color: #008CBA; /* Blue */
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Styling for Login button */
+.login {
+  background-color: #008CBA; /* Blue */
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.login-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Styles for the admin links */
+.admin-welcome {
+  text-align: center;
+  margin: 20px;
+}
+
+.admin-links {
+  display: flex;
+  justify-content: center;
+}
+
+.admin-link {
+  margin: 10px;
+}
+
+/* Styles for the product listings */
+.welcome {
+  text-align: center;
+  margin: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  width: 400px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.product h3 {
+  font-size: 24px;
+}
+
+.product p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.product .quantity {
+  width: 50px;
+}
+
+.product .add-to-cart {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.navbar {
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+.navbar-brand {
+color: #fff;
+font-size: 24px;
+font-weight: bold;
+text-decoration: none;
+}
+
+.navbar-links {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.navbar-links form {
+margin: 0;
+padding: 0;
+}
+
+.navbar-links button {
+margin-left: 10px;
+}
+
+.pagination-container {
+margin-left: 35px; /* Change this value to your desired margin */
+}
+
+.view-cart-button {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    width: 100%;
+}
+
+.view-cart-button .button {
+   background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;  
+}
+
+
