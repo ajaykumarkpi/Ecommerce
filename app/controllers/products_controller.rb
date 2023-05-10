@@ -7,14 +7,6 @@ class ProductsController < ApplicationController
     end
   end
   
-  def show
-    if logged_in?(:admin)
-      @products = Product.all
-    else
-      @products = Product.page(params[:page]).per(5)
-    end
-  end
-  
   def new
     @product = Product.new
   end

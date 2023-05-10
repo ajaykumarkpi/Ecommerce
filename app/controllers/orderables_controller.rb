@@ -4,10 +4,6 @@ class OrderablesController < ApplicationController
     @orderable = Orderable.new
   end
 
-  def index
-    @orderables = Orderable.all
-  end
-
   def create
     @orderable = Orderable.new(orderables_params)
 
@@ -23,6 +19,6 @@ class OrderablesController < ApplicationController
   private
 
   def orderables_params
-    params.require(:orderable).permit(:param1, :param2, :param3)
+    params.require(:orderable).permit(:first_name, :last_name, :customer_email, :address,:city,:state,:pincode,:country,:Mobile_No)
   end
 end

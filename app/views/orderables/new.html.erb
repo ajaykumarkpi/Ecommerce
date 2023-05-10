@@ -1,14 +1,52 @@
-<%= link_to "Products",products_path %>
-
+<div class="center">
+<h3>Please fill details for placing order:</h3>
+<hr>
 <%= form_for @orderable do |f| %>
-  <%= f.label :customer_name %>
-  <%= f.text_field :customer_name %></br>
+<div class="form-group">
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %></br>
+</div>
 
+<div class="form-group">
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %></br>
+</div>
+
+<div class="form-group">
   <%= f.label :customer_email %>
   <%= f.email_field :customer_email %></br>
+</div>
 
+<div class="form-group">
   <%= f.label :address %>
-  <%= f.text_field :address%></br>
+  <%= f.text_field :address %></br>
+</div>
+
+<div class="form-group">
+  <%= f.label :city %>
+  <%= f.text_field :city %></br>
+</div>
+
+<div class="form-group">
+  <%= f.label :state %>
+  <%= f.text_field :state %></br>
+</div>
+
+<div class="form-group">
+  <%= f.label :pincode %>
+  <%= f.number_field :pincode, type: :number %></br>
+</div>
+
+<div class="form-group">
+  <%= f.label :country %>
+  <%= f.text_field :country %></br>
+</div>
+
+<div class="form-group">
+  <%= f.label :Mobile_No %>
+  <%= f.number_field :Mobile_No, type: :number %></br>
+</div>
 
   <%= f.submit "Place Order" %>
 <% end %>
+</center>

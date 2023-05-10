@@ -1,12 +1,14 @@
 <center>
 <h1>All Products</h2>
 <hr>
-<table style="border-collapse: collapse; width: 80%; margin: 1rem 0;">
+<table style="border-collapse: collapse; width: 100%; margin: 1rem 0;">
   <thead>
     <tr style="background-color: #2c3e50; color: #fff;">
       <th style="padding: 1rem; font-weight: bold;">Name</th>
       <th style="padding: 1rem; font-weight: bold;">Description</th>
       <th style="padding: 1rem; font-weight: bold;">price</th>
+      <th style="padding: 1rem; font-weight: bold;">Edit Product</th>
+      <th style="padding: 1rem; font-weight: bold;">Delete Product</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +17,8 @@
         <td style="padding: 1rem; border: 1px solid #ddd;"><%= product.name %></td>
         <td style="padding: 1rem; border: 1px solid #ddd;"><%= product.description %></td>
         <td style="padding: 1rem; border: 1px solid #ddd;"><%= product.price %></td>
+        <td style="padding: 1rem; border: 1px solid #ddd;"><%= link_to "Edit", edit_product_path(product) %></td>
+        <td style="padding: 1rem; border: 1px solid #ddd;"><%= link_to "Delete", product_path(product), method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>

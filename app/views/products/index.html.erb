@@ -1,22 +1,15 @@
-<nav class="navbar">
-  <a class="navbar-brand" href="#">Welcome to E-Commerce Website</a>
-  <div class="navbar-links">
-    <%= login_helper %>
-  </div>
-</nav>
-
 <% if logged_in?(:admin) %>
   <div class="admin-welcome">
     <h1>Welcome admin</h1>
     <div class="admin-links">
       <div class="admin-link">
-        <%= link_to "All products", products_show_path %>
+        <%= link_to "All products", admins_show_path %>
       </div>
       <div class="admin-link">
-        <%= link_to "All users", users_index_path %>
+        <%= link_to "All users", admins_index_path %>
       </div>
       <div class="admin-link">
-        <%= link_to "All orders", orderables_path %>
+        <%= link_to "All orders", admins_new_path %>
       </div>
     </div>
   </div>
@@ -27,7 +20,7 @@
     <div class="products">
       <% @products.each do |product| %>
         <div class="product">
-          <h3><%= product.name %></h3>
+          <h3><%=  product.name%></h3>
           <p><%= product.description %></p>
           <p>Unit price: <%= number_to_currency(product.price) %></p>
           <%= form_with(url: carts_add_path) do |f| %>
