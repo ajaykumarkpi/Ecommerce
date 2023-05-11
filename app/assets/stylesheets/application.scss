@@ -58,6 +58,121 @@
   border-radius: 4px;
 }
 
+/* Styling for login page */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.login-form .field {
+  margin-bottom: 15px;
+}
+
+.login-form .actions {
+  margin-top: 15px;
+}
+
+h2 {
+  color: #333;
+  font-size: 32px;
+  text-align: center;
+}
+
+label {
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="password"] {
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="email"] {
+  width: 200px !important;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.login-form .actions input[type="submit"] {
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Styling for sign-up page */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.signup-form h2 {
+  color: #333;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-form .field {
+  margin-bottom: 15px;
+}
+
+.signup-form label {
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="password"] {
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.signup-form input[type="email"] {
+  width: 200px !important;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.signup-form .actions {
+  margin-top: 15px;
+}
+
+.signup-form input[type="submit"] {
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
 /* Styling for Login button */
 .login {
   background-color: #008CBA; /* Blue */
@@ -171,9 +286,15 @@ padding: 0;
 margin-left: 10px;
 }
 
+/* Styles for pagination */
 .pagination-container {
-margin-left: 35px; /* Change this value to your desired margin */
+  text-align: center;
 }
+
+.pagination-centered {
+  display: inline-block;
+}
+
 
 .view-cart-button {
     display: flex;

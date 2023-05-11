@@ -17,15 +17,6 @@ ActiveRecord::Schema.define(version: 2023_05_10_114655) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "itemlists", force: :cascade do |t|
-    t.integer "quantity"
-    t.integer "product_id"
-    t.integer "cart_id"
-    t.integer "order_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "orderables", force: :cascade do |t|
     t.string "product"
     t.string "belongs_to"
@@ -37,14 +28,6 @@ ActiveRecord::Schema.define(version: 2023_05_10_114655) do
     t.string "first_name"
     t.string "customer_email"
     t.index ["cart_id"], name: "index_orderables_on_cart_id"
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.text "address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|

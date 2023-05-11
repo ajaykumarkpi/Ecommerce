@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'admins/show'
   get 'admins/index'
   get 'admins/new'
+  get '/products/:id', to: 'products#show', as: 'product'
+
   
   resources :products
   resources :orderables

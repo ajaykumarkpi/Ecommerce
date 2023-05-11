@@ -16,31 +16,31 @@
 
 <% else %>
   <div class="welcome">
-    <h2>All Products</h2>
-    <div class="products">
-      <% @products.each do |product| %>
-        <div class="product">
-          <h3><%=  product.name%></h3>
-          <p><%= product.description %></p>
-          <p>Unit price: <%= number_to_currency(product.price) %></p>
-          <%= form_with(url: carts_add_path) do |f| %>
-            <%= f.hidden_field :id, value: product.id %>
-            <%= f.number_field :quantity,value: 0, min: 1, class: 'quantity' %>
-            <%= f.submit "Add to Cart", class: 'add-to-cart' %>
-          <% end %>
-        </div>
-        <hr>
-      <% end %>
+  <h2>All Products</h2>
+  <div class="products">
+    <% @products.each do |product| %>
+      <div class="product">
+        <h3><%= link_to product.name, product_path(product) %></h3>
+        <p><%= product.description %></p>
+        <p>Unit price: <%= number_to_currency(product.price) %></p>
+        
+      </div>
+      <hr>
+    <% end %>
+  </div>
+</div>
+
+
+  <div class="pagination-container">
+    <div class="pagination-centered">
+      <%= paginate @products %>
     </div>
   </div>
 
-  <div class="pagination-container">
-  <%= paginate @products %>
-  </div>
 
   </br>
 
   <div class="view-cart-button"><%= button_to "View cart", carts_index_path, style: "background-color: #4CAF50; color: white; border-radius: 5px; padding: 10px;" %>
- </div>
+  </div>
 <% end %>
 

@@ -3,13 +3,18 @@ class ProductsController < ApplicationController
     if logged_in?(:admin)
       @products = Product.all
     else
-      @products = Product.page(params[:page]).per(5)
+      @products = Product.page(params[:page]).per(6)
     end
   end
   
   def new
     @product = Product.new
   end
+
+  def show
+    @product = Product.find(params[:id])
+  end
+  
 
   def create
     @product = Product.create(product_params)

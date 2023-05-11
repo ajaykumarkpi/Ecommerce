@@ -1,0 +1,17 @@
+<center>
+<div class="product">
+  <center>
+  <h2><%= @product.name %></h2>
+  <p><%= @product.description %></p>
+  <p>Unit price: <%= number_to_currency(@product.price) %></p>
+  <%= form_with(url: carts_add_path) do |f| %>
+    <%= f.hidden_field :id, value: @product.id %>
+    <%= f.number_field :quantity, value: 0, min: 1, class: 'quantity' %>
+    <%= f.submit "Add to Cart", class: 'add-to-cart' %>
+  <% end %>
+</div> 
+</center>
+
+<div class="view-cart-button"><%= button_to "View cart", carts_index_path, style: "background-color: #4CAF50; color: white; border-radius: 5px; padding: 10px;" %>
+</div>
+</center>
